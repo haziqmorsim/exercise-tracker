@@ -1,14 +1,11 @@
 {
   "name": "exercise-tracker",
   "version": "1.0.0",
-  "description": "FreeCodeCamp Exercise Tracker Project",
+  "description": "FreeCodeCamp Exercise Tracker API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "Haziq Morsim",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.1.0",
