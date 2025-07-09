@@ -19,8 +19,9 @@ app.get('/', (req, res) => {
   res.send('Exercise Tracker API is running.');
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`✅ Server listening on port ${process.env.PORT}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`✅ Server listening on port ${PORT}`);
 });
 
 // POST /api/users
