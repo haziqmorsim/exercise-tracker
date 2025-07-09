@@ -21,6 +21,11 @@ app.get('/', (req, res) => {
   res.send('Exercise Tracker API is running.');
 });
 
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ Server listening on port ${PORT}`);
