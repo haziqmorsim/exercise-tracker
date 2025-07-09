@@ -1,10 +1,24 @@
-const mongoose = require('mongoose');
+const { DataTypes } = require('sequelize');
+const sequelize = require('../sequelize');
+const User = require('./user');
 
-const ExerciseSchema = new mongoose.Schema({
-  userId: { type: String, required: true },
-  description: { type: String, required: true },
-  duration: { type: Number, required: true },
-  date: { type: Date, default: Date.now }
+const Exercise = sequelize.define('Exercise', {
+  description: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  duration: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  date: {
+    type: DataTypes.DATE,
+    allowNull: false
+  }
 });
 
-module.exports = mongoose.model('Exercise', ExerciseSchema);
+// Associations
+User.hasMany(Exercise);
+Exercise.belongsTo(User);
+
+module.exports = Exercise;
