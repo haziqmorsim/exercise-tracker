@@ -1,15 +1,22 @@
 {
-  "name": "exercise-tracker-sqlite",
+  "name": "exercise-tracker",
   "version": "1.0.0",
+  "description": "Exercise Tracker API for freeCodeCamp",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
+  "keywords": [],
+  "author": "Haziq Morsim",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.1.0",
     "express": "^5.1.0",
-    "sequelize": "^6.37.1",
-    "sqlite3": "^5.1.6"
+    "mongoose": "^8.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
